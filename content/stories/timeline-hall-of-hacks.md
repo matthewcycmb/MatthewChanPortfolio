@@ -1,0 +1,1 @@
+At 15, I launched Hall of Hacks, a database of **50+ winning projects** from Hack the North, TreeHacks, and Cal Hacks to help people find ideas for what to build. It reached around **3,000 users** in its first month, and my launch Reel got around **197,000 views**.

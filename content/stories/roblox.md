@@ -1,0 +1,1 @@
+At 12, I started selling pumpkin-head accessories on Roblox before Halloween. I hired people to model and upload them, and asked my Discord community which designs they liked best. I’d even check my pending Robux in music class just to see the number go up.

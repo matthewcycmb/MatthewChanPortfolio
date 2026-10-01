@@ -1,0 +1,1 @@
+The API approach I tried made it too awkward to message people, and I hated how my version looked. I switched to opening Instagram’s website inside the app and hiding Feed, Reels, and Explore. That got messages working, but changes to Instagram can still mean another fix.

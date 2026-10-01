@@ -1,0 +1,1 @@
+Hall of Hacks is a database of winning hackathon projects from Devpost, so people can look through what wins and get inspired for their own projects. It reached around 3,000 users in its first month, and my launch Reel got around 197,000 views.

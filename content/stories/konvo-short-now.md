@@ -1,0 +1,1 @@
+I submitted Konvo to Shipaton’s Next Gen category, and I’m still working on the app. I’ve also tried upfront payment and free trials, but I need to put the dates and results together before I can make a useful comparison.

@@ -1,0 +1,1 @@
+At 14, I started posting coding videos, then tried motivation, Pokémon, and vlogs. Now I share my story, tech, hackathons, and what I’m building. I have about **5.5k** followers and **3.5 million** views on Instagram.

@@ -1,0 +1,1 @@
+Konvo opens straight to your Instagram messages and automatically removes your Reels, Feed, and Explore pages. As of September 30, 2026, it has 15,000+ downloads, 3 million organic views and five figures in revenue.

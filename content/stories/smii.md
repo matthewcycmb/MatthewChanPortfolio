@@ -1,0 +1,1 @@
+Julia and I came up with Smii together: a journaling app that helps you look back on your own life. I built the app and helped with the pitch. Julia handled most of the pitch, and we won first place at the TechTO × Althra hackathon.

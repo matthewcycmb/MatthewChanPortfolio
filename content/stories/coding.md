@@ -1,0 +1,1 @@
+In the last two weeks of my Grade 10 programming class, I discovered AI coding through Antigravity. I realized I could build much more than I’d thought possible. I later switched to Claude Code and spent the next couple of months making projects and prototypes.

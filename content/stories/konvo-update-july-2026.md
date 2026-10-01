@@ -1,0 +1,5 @@
+On July 19, during an eight-hour walk and hangout in Hong Kong, I told my best friend Alisa Du about an app idea that had been in the back of my mind: an app that opens straight to your Instagram messages and removes the Feed, Explore, and Reels pages. I originally thought it would be too hard to build, so I never took action, but on that day, she told me I should try, which was the push I needed. That night, I recorded a huge brain dump in my Notes app, fed it into Claude Code, and started building.
+
+I first tried using Instagram’s API, but in the version I built, I could only reply after someone messaged me, within a 24-hour window. I hated how it looked, too, and I didn’t think my friends would use something that inconvenient. So I switched to opening Instagram’s website inside the app and hiding Feed, Reels, and Explore.
+
+By July 26, I had an ugly but working version on my phone, and I sent Alisa the TestFlight version the next day. That got my messages working, but Konvo still depends on Instagram’s website, so changes there can mean another fix.

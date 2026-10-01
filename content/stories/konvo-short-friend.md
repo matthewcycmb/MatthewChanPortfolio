@@ -1,0 +1,1 @@
+My friend Aden Choi tried the TestFlight version and told me the chats should feel more like Instagram. I spent the next day working on swipe animations so opening and closing a chat didn’t just flash a new screen. It felt much smoother afterward.

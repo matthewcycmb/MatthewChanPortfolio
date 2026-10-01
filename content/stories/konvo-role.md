@@ -1,0 +1,1 @@
+This is my solo, AI-assisted product. I chose the problem, made the product and onboarding decisions, tested the app, responded to feedback, handled App Store submissions, chose pricing, and promoted it. Claude Code and Codex helped with development.

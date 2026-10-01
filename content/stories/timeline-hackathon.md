@@ -1,0 +1,1 @@
+At 15, Julia Sung and I won **first place and a $1,000 CAD team prize** at the Vancouver TechTO × Althra hackathon with Smii, a video journal we came up with together. I built the app and helped with the pitch; Julia handled most of the pitch. We were the only high school team, and the judging panel included three founders of YC-backed companies.

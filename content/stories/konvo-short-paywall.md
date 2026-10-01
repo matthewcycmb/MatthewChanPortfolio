@@ -1,0 +1,1 @@
+When I promoted Konvo on September 1, people got stuck on “Loading your plans.” The paywall was waiting for an unapproved lifetime product, but my local test file included it. I fixed it in build 82 by waiting only for products I was actually selling.

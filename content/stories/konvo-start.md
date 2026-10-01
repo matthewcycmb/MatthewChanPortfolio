@@ -1,0 +1,1 @@
+I deleted Instagram for two weeks. When I came back, I had 15+ unread messages from friends. At my school, we mostly talk through Instagram, so I built Konvo to keep my messages without getting pulled back into Reels.
