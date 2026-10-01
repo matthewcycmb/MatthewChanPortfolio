@@ -29,6 +29,10 @@ export const links = {
   hackathonEvent: 'https://luma.com/techto-hackaton-web-summit-may-10-2026',
 };
 
+export const homeIntro = {
+  label: 'KONVOINSTALL.COM', href: links.konvo, story: 'home-intro',
+};
+
 export const ageOverview = [
   { age: 12, story: 'overview-age-12', format: 'list' },
   { age: 15, story: 'overview-age-15', format: 'list' },

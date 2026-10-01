@@ -1,5 +1,7 @@
 # Claims and asset audit
 
+Matthew supplies “built b'gc to 3,000 members” for the Roblox overview, linked to community 32929438, and revises the Robux sentence without changing its supplied total. The group result is his authorized first-person account, not independently verified; the measurement date, historical membership snapshot and growth period are unspecified. No analytics or private source is queried. Existing Robux accounting questions and detailed modelling/collaboration credits remain intact. The new homepage introduction repeats his confirmed age and existing Konvo product description.
+
 Latest wording restores the plus sign as “3,000,000+ organic views w/ $0 ad spend,” expands Hall of Hacks’ “3k users” to “3,000 users,” and removes the App Store ranking from the overview again. The plus sign is Matthew’s supplied account, not a new calculation or independent verification; existing measurement questions remain unresolved.
 
 Matthew restores “3M organic views w/ $0 ad spend” and “peaked #61 for productivity on the appstore” directly below the reformatted “15,000 downloads & 5 figures in revenue.” These remain his authorized first-person accounts; view scope, advertising window and ranking date/storefront/chart remain unresolved. No verification status changes.

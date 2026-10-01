@@ -1,5 +1,13 @@
 # Matthew Chan: retained interview notes
 
+## October 1: project-led introduction and Roblox group
+
+Latest correction: use exactly “i'm matthew,” “i am 16,” and “built b'gc - 3,000 members on roblox,” preserving the existing community link.
+
+Matthew supplies a reference with a prominent product link, two personal lines and a separated product sentence. Replace the old homepage introduction with linked “KONVOINSTALL.COM,” then exactly “i’m Matthew,” “i am 16 years old,” and after a gap, “and i am building konvo - an app that opens straight to your instagram messages.” Retain the existing greeting above it, the blue bold link styling and the age overview below. Only the layout comes from the reference.
+
+Under age 12, replace the earnings line with “made 500,000+ robux selling pumpkin hats on roblox” and add “built b'gc to 3,000 members,” linking b'gc to Matthew’s supplied Roblox community URL. Keep the move to Vancouver line.
+
 ## October 1: grouped age-16 summary
 
 Latest correction: write “3,000 users” in the age-15 results, remove the age-16 App Store ranking, and use “3,000,000+ organic views w/ $0 ad spend.” Other wording and grouping stay intact.

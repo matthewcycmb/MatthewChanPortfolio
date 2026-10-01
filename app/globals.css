@@ -55,6 +55,9 @@ html:has(.home-page), body:has(.home-page) { background: #f8f5ef; }
 .home-page .intro h1 { font: 700 20px/1.6 var(--sans); letter-spacing: .05em; text-transform: uppercase; border-bottom: .5px solid var(--line); padding-bottom: 32px; margin-bottom: 32px; }
 .home-page .intro > p { font-size: 15px; font-weight: 500; line-height: 1.8; }
 .home-page h2 { font: 600 18px/1.8 var(--sans); letter-spacing: .05em; text-transform: uppercase; }
+.home-page .intro-project > h2 { font-size: 20px; font-weight: 700; margin-bottom: 15px; }
+.intro-copy { font-size: 15px; font-weight: 500; line-height: 1.8; }
+.intro-copy > p + p { margin-top: 15px; }
 .work-list > li { border-bottom: 1px solid var(--line); }
 .work-list > li:last-child { border-bottom: 0; }
 .work-link { display: grid; grid-template-columns: 60px 1fr auto; align-items: center; gap: 20px; height: 52px; text-decoration: none; }

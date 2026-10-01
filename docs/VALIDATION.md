@@ -1,3 +1,7 @@
+# Product introduction and Roblox community, October 1, 2026
+
+Replaced the old homepage introduction with Matthew’s supplied linked product heading, name/age lines and separated product sentence. Updated the age-12 Robux wording and added the linked b'gc member result. `npm run check` and `PORTFOLIO_REVIEW=1 npm run build` pass. Local Chrome at 1440, 390 and 320px confirms the exact text and destinations, 20px bold blue product heading, 27px body line spacing, 15px paragraph gap, no overflow or page errors, and no detected axe violations. Keyboard focus, reduced motion and no-JavaScript reading pass. Desktop/mobile screenshots were visually inspected. Production copy and placeholder checks pass. Ignored captures: `artifacts/home-intro-*`.
+
 # Overview number formatting and Vercel routing, October 1, 2026
 
 Updated the overview to the supplied comma-separated counts, removed its App Store ranking and changed the organic-view wording to “3,000,000+ organic views w/ $0 in ad spend.” `npm run check` and `PORTFOLIO_REVIEW=1 npm run build` pass.
