@@ -1,3 +1,9 @@
+# Overview number formatting and Vercel routing, October 1, 2026
+
+Updated the overview to the supplied comma-separated counts, removed its App Store ranking and changed the organic-view wording to “3,000,000+ organic views w/ $0 in ad spend.” `npm run check` and `PORTFOLIO_REVIEW=1 npm run build` pass.
+
+The initial Vercel deployments showed Ready but returned HTTP 404 at both `matthewchan-mauve.vercel.app/` and `matthew-one.vercel.app/`; a public cover image returned 200. The `matthewchan` project inspection showed the “Other” framework preset and the default `public` output directory. Build logs confirmed that Next.js successfully generated all portfolio pages, but those pages were not served by the generic static deployment. Added `vercel.json` with `framework: "nextjs"` so deployments use the Next.js integration. This addresses the documented [framework/output mismatch](https://vercel.com/docs/builds/configure-a-build), without adding routing rewrites. Verify the live homepage and all project routes after the Git-triggered deployment completes.
+
 # Initial GitHub commit review, October 1, 2026
 
 Moved an unused results collage containing subscriber identifiers from public assets into ignored private storage, preserving its bytes, and removed its unused photo record. The rendered gallery continues using the approved aggregate chart crop. `npm run check` and `PORTFOLIO_REVIEW=1 npm run build` pass after the removal; generated HTML excludes the withheld collage, private paths and local placeholders. No layout changed. The files selected for Git contain no detected token/private-key patterns or files above GitHub’s 100MB limit. Private sources, browser artifacts, local environment files and build outputs remain ignored.

@@ -1,5 +1,9 @@
 # Claims and asset audit
 
+Latest wording restores the plus sign as “3,000,000+ organic views w/ $0 ad spend,” expands Hall of Hacks’ “3k users” to “3,000 users,” and removes the App Store ranking from the overview again. The plus sign is Matthew’s supplied account, not a new calculation or independent verification; existing measurement questions remain unresolved.
+
+Matthew restores “3M organic views w/ $0 ad spend” and “peaked #61 for productivity on the appstore” directly below the reformatted “15,000 downloads & 5 figures in revenue.” These remain his authorized first-person accounts; view scope, advertising window and ranking date/storefront/chart remain unresolved. No verification status changes.
+
 October 1 pre-push review found the unused `konvo-september-results-page.webp` collage still in `public/images/`, despite the withholding decision below. It contains subscriber identifiers. Moved it unchanged to ignored private storage and removed the unused photo record before the initial Git commit. The approved revenue/download chart crop and published pages are unchanged.
 
 Latest October 1 revision removes the overview’s organic-views/ad-spend total and App Store ranking, reorders the existing downloads/revenue statement, and restores “hit 2M views on instagram in less than 24 hours” with the existing September Reel link. This repeats the authorized single-Reel account, without new analytics or independent verification. Removing the solo parenthetical from the short building line leaves the detailed solo AI-assisted role unchanged. Earlier audit entries below remain history.

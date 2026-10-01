@@ -18,4 +18,6 @@ npm run check
 npm run build
 ```
 
-No CMS, database, tracking, or external font service. Raw evidence is never served. The local review panel is disabled in every production build. No deployment has been made.
+No CMS, database, tracking, or external font service. Raw evidence is never served. The local review panel is disabled in every production build.
+
+Vercel deployments use the repository root and the Next.js framework preset pinned in `vercel.json`. Keep the output directory on its framework default; `public/` contains assets, not the built pages. Pushes to `main` trigger the connected Vercel projects.

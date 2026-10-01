@@ -1,4 +1,5 @@
-15k downloads & 5 figures in revenue\
+15,000 downloads & 5 figures in revenue\
+3,000,000+ organic views w/ $0 in ad spend\
 now building [konvoinstall.com](https://konvoinstall.com)
 
 hit 10k followers on [@matthewasherelol](https://www.instagram.com/matthewasherelol/)\

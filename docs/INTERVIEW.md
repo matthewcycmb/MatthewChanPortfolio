@@ -2,6 +2,10 @@
 
 ## October 1: grouped age-16 summary
 
+Latest correction: write “3,000 users” in the age-15 results, remove the age-16 App Store ranking, and use “3,000,000+ organic views w/ $0 ad spend.” Other wording and grouping stay intact.
+
+Follow-up: spell the opening count as “15,000 downloads & 5 figures in revenue,” then restore “3M organic views w/ $0 ad spend” and “peaked #61 for productivity on the appstore” directly underneath, before the building line. Keep the existing groups and links.
+
 Matthew puts “15k downloads & 5 figures in revenue” first, followed directly by “now building konvoinstall.com” without the solo parenthetical. After a blank line, retain “hit 10k followers on @matthewasherelol” and add “hit 2M views on instagram in less than 24 hours,” linking only “2M views” to the existing viral Reel. After another blank line, show the linked Starter Story statement. Remove the organic-views/ad-spend total and App Store ranking from this overview. Keep the existing separated closing line. His requested gaps use the previously matched 15px paragraph margin; lines within each group retain 27px spacing.
 
 ## October 1: plain lines under age 16

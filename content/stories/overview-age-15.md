@@ -8,4 +8,4 @@ only high school team, judged by YC founders
 
 built [hallofhackss.com](https://hallofhackss.com/)
 
-3k users & 200k+ organic views in 14 days
+3,000 users & 200,000+ organic views in 14 days
