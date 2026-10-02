@@ -1,5 +1,15 @@
 # Claims and asset audit
 
+October 1: Matthew approves “i'm building konvo - bootstrapped to 15,000 downloads at 16” for the homepage introduction. This restates his supplied bootstrapped account, existing download count and confirmed age; it adds no independent verification or active-user claim. The existing measurement questions remain unresolved.
+
+October 1: Matthew supplies “the most effective screentime app” for the homepage introduction, then replaces the full sentence with “i'm building konvo.” The comparative claim is no longer displayed. It was his requested promotional wording, not an independently verified comparative result. No effectiveness definition, comparison set or measured screen-time reduction was supplied; existing evidence status remains unchanged.
+
+October 1: Matthew supplies and authorizes the blue Konvo App Store listing screenshot for the timeline. Reviewed image contains the public icon, title, subtitle and store controls, with no account or conversation details. `konvo-app-store-timeline.webp` is a lossless copy with metadata removed; the original is retained in ignored private storage. This replaces only the timeline thumbnail and adds no metric verification or historical screenshot date claim.
+
+Matthew’s latest overview wording is “won 1st and placed in 4 hackathons ‼️”. Preserve it as his supplied account without inferring four first-place wins or adding verification. The earlier consecutive-sequence wording is no longer displayed.
+
+Matthew supplies “won/placed in 4 back to back hackathons” as the compact age-15 overview. The four-event count and consecutive sequence are his authorized first-person account, not newly independently verified. Do not infer four first-place wins, identify an unprovided fourth event, or reclassify competitions in the retained detailed stories. Existing team contribution credits and evidence status stay unchanged.
+
 Matthew supplies “built b'gc to 3,000 members” for the Roblox overview, linked to community 32929438, and revises the Robux sentence without changing its supplied total. The group result is his authorized first-person account, not independently verified; the measurement date, historical membership snapshot and growth period are unspecified. No analytics or private source is queried. Existing Robux accounting questions and detailed modelling/collaboration credits remain intact. The new homepage introduction repeats his confirmed age and existing Konvo product description.
 
 Latest wording restores the plus sign as “3,000,000+ organic views w/ $0 ad spend,” expands Hall of Hacks’ “3k users” to “3,000 users,” and removes the App Store ranking from the overview again. The plus sign is Matthew’s supplied account, not a new calculation or independent verification; existing measurement questions remain unresolved.

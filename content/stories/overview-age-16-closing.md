@@ -1,1 +1,1 @@
-its just getting started
+i'm just getting started

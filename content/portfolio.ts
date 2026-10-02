@@ -69,5 +69,5 @@ export const timeline: TimelineEntry[] = [
   { id: 'coding', period: 'Jan 2026', title: 'Discovered AI coding', story: 'timeline-coding', more: 'timeline-more-coding' },
   { id: 'hackathon', period: 'May 2026', title: 'Won my first hackathon', story: 'timeline-hackathon', more: 'timeline-more-hackathon', media: [{ photo: photos.techtoHackathon, label: 'TechTO × Althra hackathon' }], href: links.hackathonResult, label: 'The organizer’s recap' },
   { id: 'hall-of-hacks', period: 'Jun 2026', title: 'Launched my first software product', story: 'timeline-hall-of-hacks', more: 'timeline-more-hall-of-hacks', media: [{ photo: photos.hallOfHacksLogo, label: 'Hall of Hacks' }], href: '/work/hall-of-hacks', label: 'The full Hall of Hacks story' },
-  { id: 'konvo', period: 'Sep 2026', title: 'Launched my first mobile app', story: 'timeline-konvo', more: 'timeline-more-konvo', media: [{ photo: photos.konvo, label: 'Earlier build' }], href: '/work/konvo', label: 'The full Konvo story' },
+  { id: 'konvo', period: 'Sep 2026', title: 'Launched my first mobile app', story: 'timeline-konvo', more: 'timeline-more-konvo', media: [{ photo: photos.konvoAppStoreTimeline, label: 'App Store' }], href: '/work/konvo', label: 'The full Konvo story' },
 ];

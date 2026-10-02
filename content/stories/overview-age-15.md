@@ -1,10 +1,4 @@
-1st place @ TechTO x Althra Vancouver hackathon
-
-only high school team, judged by YC founders
-
-1st place @ Games 4 Change gamejam Hong Kong
-
-2nd place @ Strive Business Case Competition
+won 1st and placed in 4 hackathons ‼️
 
 built [hallofhackss.com](https://hallofhackss.com/)
 

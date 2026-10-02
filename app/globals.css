@@ -46,7 +46,7 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 html:has(.home-page), body:has(.home-page) { background: #f8f5ef; }
 .home-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; max-width: 650px; margin: 0 auto; padding: 8px 32px; color: #3a3a3a; font: 600 13px/1.8 var(--font-home), Arial, sans-serif; letter-spacing: .05em; }
 .home-mark { display: grid; place-items: center; width: 44px; height: 44px; flex-shrink: 0; margin-left: -12px; }
-.home-mark > span { width: 20px; height: 20px; background: #bc2d4a; }
+.home-mark > span { width: 20px; height: 20px; background: #356da8; }
 .home-header nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 32px; }
 .home-header nav a { display: flex; align-items: center; min-height: 44px; text-decoration: none; text-transform: uppercase; }
 .home-header nav a:hover, .home-header nav a[aria-current="page"] { text-decoration: underline; }
@@ -58,9 +58,10 @@ html:has(.home-page), body:has(.home-page) { background: #f8f5ef; }
 .home-page .intro-project > h2 { font-size: 20px; font-weight: 700; margin-bottom: 15px; }
 .intro-copy { font-size: 15px; font-weight: 500; line-height: 1.8; }
 .intro-copy > p + p { margin-top: 15px; }
-.work-list > li { border-bottom: 1px solid var(--line); }
+.home-page:has(.work-list) .intro h1 { margin-bottom: 0; }
+.work-list > li { border-bottom: .5px solid var(--line); }
 .work-list > li:last-child { border-bottom: 0; }
-.work-link { display: grid; grid-template-columns: 60px 1fr auto; align-items: center; gap: 20px; height: 52px; text-decoration: none; }
+.work-link { display: grid; grid-template-columns: 60px 1fr auto; align-items: center; gap: 20px; min-height: 68px; padding-block: 16px; text-decoration: none; }
 .work-copy { min-width: 0; }
 .work-title { font-size: 14px; }
 .work-date { font-size: 12px; font-weight: 500; color: var(--muted); white-space: nowrap; }
@@ -106,6 +107,7 @@ html:has(.home-page), body:has(.home-page) { background: #f8f5ef; }
 .evidence img { width: 100%; max-width: 330px; border: 7px solid white; box-shadow: 0 3px 8px #43281816; }
 figcaption { font-size: 11px; color: var(--muted); line-height: 1.5; margin-top: 11px; }
 .footer { border-top: 1px solid var(--line); margin-top: 32px; padding-top: 16px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.home-page .footer { border-top-width: .5px; }
 .home-page:has(.age-overview, .work-list) .footer { margin-top: 0; }
 .footer nav { display: flex; gap: 17px; }
 .footer nav a { font-size: 12px; }

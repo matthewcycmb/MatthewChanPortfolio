@@ -1,5 +1,21 @@
 # Matthew Chan: retained interview notes
 
+Latest October 1 intro wording: “i'm building konvo - bootstrapped to 15,000 downloads at 16.” Matthew approves this framing using his existing bootstrapped account, download count and age. It replaces “i'm building konvo”; the earlier effectiveness claim stays removed. Keep his lowercase style and the existing name/age lines.
+
+Latest October 1 image change: replace the Konvo timeline’s “Earlier build” inbox thumbnail with Matthew’s supplied blue App Store listing screenshot. Use the existing wide thumbnail and enlarge-on-click presentation, with the label “App Store.”
+
+Latest October 1 correction: remove “moved from hong kong to vancouver” from the age-12 overview. Keep the two Roblox bullets.
+
+## October 1: closing wording and Work dividers
+
+Matthew replaces the age-16 closing with exactly “i'm just getting started” and asks for the Work-page lines in his supplied screenshot to be fixed using his browser. The screenshot shows a finer heading rule than the row/footer rules and little clearance below the photos. Match the rule weights and give the rows even vertical padding, including the first row below the heading; retain a single footer separator.
+
+## October 1: shorter hackathon overview
+
+Latest exact wording: “won 1st and placed in 4 hackathons ‼️”. This replaces the earlier consecutive-hackathon wording.
+
+Matthew replaces the four competition/team-detail lines under age 15 with exactly “won/placed in 4 back to back hackathons.” Keep the Hall of Hacks link and results underneath. Detailed timeline and journal accounts retain their existing wording and contribution credits.
+
 ## October 1: project-led introduction and Roblox group
 
 Latest correction: use exactly “i'm matthew,” “i am 16,” and “built b'gc - 3,000 members on roblox,” preserving the existing community link.

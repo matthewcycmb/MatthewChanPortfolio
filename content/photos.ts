@@ -14,6 +14,7 @@ export const photos = {
   konvoCutout: { src: '/images/konvo-phone-cutout.webp', alt: 'Three Konvo iPhone screens: the message inbox, Instagram blocking and a timed unlock prompt.', width: 900, height: 600, fit: 'contain' },
   instagramSelfie: { src: '/images/matthew-instagram-selfie.webp', alt: 'Matthew taking a close-up selfie, wearing round glasses and a white shirt.', width: 900, height: 1200, position: '50% 72%' },
   konvo: { src: '/images/konvo-inbox-redacted.webp', alt: 'Konvo’s earlier inbox with account and conversation details redacted.', width: 600, height: 1301, caption: 'Earlier build from my submission. Account and conversation details redacted.', fit: 'contain' },
+  konvoAppStoreTimeline: { src: '/images/konvo-app-store-timeline.webp', alt: 'Konvo: DMs Only App Store listing with its blue icon and Reduce Screen Time subtitle.', width: 1092, height: 534, caption: 'Konvo on the App Store.', fit: 'contain' },
   matthew: { src: '/images/matthew-wide.webp', alt: 'Matthew Chan wearing glasses and a black shirt.', width: 430, height: 485, caption: 'A photo from my Konvo submission.' },
   julyHongKong: { src: '/images/konvo-july-hong-kong.webp', alt: 'Two friends sitting together on a bus in Hong Kong.', width: 1170, height: 851, caption: 'Hanging out in Hong Kong.' },
   working: { src: '/images/konvo-working.webp', alt: 'Matthew working on his laptop while sitting on a bed.', width: 756, height: 972, caption: 'Working on my laptop.', fit: 'contain' },
