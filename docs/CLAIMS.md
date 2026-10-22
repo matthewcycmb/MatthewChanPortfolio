@@ -1,5 +1,51 @@
 # Claims and asset audit
 
+## October 22: supplied Instagram marketing screenshots retained
+
+Four unique screenshot originals and a private evidence manifest are saved under ignored `private/marketing/2026-10-22/`. Attachment 4 duplicates attachment 1. Matthew explicitly permits including these supplied screenshots in his portfolio or saving them for his forthcoming answers; this pass saves them for pairing with his own anecdotes. The permission is specific to these files and does not extend to unrelated account data. No raw analytics, original images or metadata are added to public assets or Git.
+
+The manifest transcribes the displayed counters and distinguishes receipt date, unconfirmed posting/capture dates, and unverified EXIF date fields. Keep abbreviated counters as displayed. These screenshots do not independently establish chronological order, time to reach a result, paid/organic attribution, unique viewers, downloads or revenue. Their Reel identities and project associations still need matching to Matthew's account and links; do not automatically assign the website Reel to Konvo or identify a post as the earlier anecdote's second viral Reel. No public totals, historical results, current age or metric-verification flags change.
+
+## October 22 correction: complete onboarding gallery authorized
+
+Matthew explicitly approves keeping the supplied onboarding screens as-is after being asked about their real names and chat previews and the existing AGENTS.md restriction. This narrow exception is recorded in AGENTS.md and supersedes the earlier 12-frame selection below. All 66 source records are included: 46 onboarding screens and 20 design, headline and notification variations. No unrelated private files, analytics or conversations are authorized.
+
+The report's embedded paywall thumbnails predate its current rendered previews. Capture the supplied local preview pages without modifying their source to show the personalized trial heading and monthly/yearly pricing in Matthew's reference. Public assets are static JPEG screenshots of those rendered pages, except `welcome.jpg`, which uses the report's unchanged embedded still so the animated phone is fully in frame. The first two screens and `paywall-video-personalized-v9` are the three update previews. Publication source paths, byte hashes and capture checks remain in ignored `private/editorial/onboarding-2026-10-22/public-complete-gallery.json` and `rendered/manifest.json`.
+
+These are design artifacts, including supplied sample answers, social proof, quotations and pricing. Reproducing them as supplied does not independently verify their claims or establish that every variation shipped. No new effectiveness, revenue or conversion result is asserted in portfolio prose. The October 16–18 work dates remain Matthew's account; this export is October 22 from the supplied current report. The separate Instamessages repository remains read-only.
+
+The September public update is now one short paragraph with the supplied launch and Reel figures; its detailed accounts remain unused source history. The October 8 Shipaton entry is removed from the rendered Konvo journal at Matthew's request. Its retained source files do not establish an award.
+
+## October 22: onboarding work and supplied milestones
+
+The age-15 posting line and age-16 “z fellows interview” are Matthew's directly supplied accounts. The interview wording establishes no fellowship acceptance, funding, award or specific interview date. His 72-hour onboarding redesign is dated October 16–18 from his request, not independently time-tracked. No conversion, retention or revenue improvement is asserted.
+
+The supplied screenshot and local gallery contain identifiable conversations in the opening screens. They are not copied into public assets. Twelve individually inspected, unchanged JPEG frames are exported to `public/images/konvo-onboarding/`: `keep`, `promise`, `goal`, `age`, `persona`, `time`, `messaging`, `permission`, `choose`, `trial-journey-offer`, `trial-journey-reminder` and `connect`. These contain interface design and illustrative form answers, no account identifiers, private conversations, analytics or testimonials. The original gallery explicitly describes names and answers as examples. Exported frames have no EXIF or XMP metadata. Screens with private chat previews, personalized account examples, quantitative effectiveness claims or social-proof totals are not included in this selection.
+
+The public gallery is a static selection with click-to-enlarge screens, not the full animated local report. Source metadata says the report was generated October 21; the frames are a supplied current design preview, not proof of the exact app state on October 18. The work dates and source-capture date remain separate. Raw report, extracted frames, browser inspection and byte-comparison manifest stay in ignored `private/editorial/onboarding-2026-10-22/`. No source repository files, live account flows or verification flags are changed. The August demo's existing publication exception remains unchanged.
+
+## October 22: directly supplied totals and article reuse
+
+Matthew explicitly supplies 25,000 downloads and 4,500,000+ organic views for the current portfolio. The opening and timeline date this update October 22, the request date; the exact analytics cutoff, download definition, view platforms/window and attribution remain unresolved. These are authorized first-person figures, not independently verified metrics. Preserve the existing five-figure revenue wording, $0 ad spend statement and all earlier dated snapshots. No verification flags change.
+
+Matthew also explicitly requests “500,000+ robux (5k usd).” This authorizes the USD parenthetical in the homepage and timeline, superseding earlier instructions to omit a dollar equivalent for this particular statement. The figure is supplied by Matthew, not calculated from a Robux exchange rate, verified as a cash payout, or derived by summing pending balances. The earlier accounting questions remain unresolved.
+
+He confirms authorship of the supplied Starter Story interview and authorizes light editing. The article was re-read for this pass. Existing paragraphs are redistributed into topic sections; the September preview uses his already retained LinkedIn sentence. A short first-person sentence records his article's two weeks of personal use while building. It adds no measured product-effectiveness claim, user study or precise dates. No article images or private records are copied. Technical speculation in the article's third-person initial-version section is not adopted. See `STARTER-STORY.md` for remaining conflicts and definitions.
+
+## October 22: portfolio reading structure
+
+The Academy-focused review changes navigation and visibility only. The three new Work descriptions copy existing sentences from `konvo-short-intro.md`, `hall-of-hacks-intro.md` and `content.md`; they add no facts. The unchanged `konvo-short-role.md` now renders openly after the demo instead of inside the origin disclosure. Monthly topic labels identify existing API, swipe-feedback, review, paywall and marketing accounts without adding a technical claim. Full stories, dated figures, collaboration credits, verification flags and public media permissions remain unchanged.
+
+The [official admissions page](https://theacademysf.com/admissions), checked October 22, emphasizes agency and proof of work and says there will be future classes. It currently describes the September 2027–August 2028 fellowship, not a confirmed application schedule for Matthew's later intended intake. Do not reuse that cohort's deadlines or financial terms for his future application.
+
+## October 8: supplied metrics and later-round account
+
+Matthew supplies 20,000 downloads, 4 million organic views and 12k followers as current figures on October 8, 2026. Publish in his authorized first-person style without public editorial labels. These are not independently verified; download definition, view platforms/window, follower snapshot and attribution remain unresolved. He confirms that the transcript’s “$20,000” refers to downloads, not revenue. The existing five-figure revenue wording remains, with no new currency, gross/net definition or recurring-revenue claim. The September 21 and September 30 records remain historical.
+
+Matthew reports an email received at 7:16 am October 8 advancing Konvo to a later selection round in at least one Shipaton category. No email or private screenshots were queried, copied or published. This dated first-person account does not establish finalist status, a named category or an award. Independently sourced submission status remains distinct from this reported progression. The [organizer’s judging guide](https://www.shipaton.com/blog/how-we-judge-shipaton) places final selection on October 8–9; the [FAQ](https://www.shipaton.com/faq) lists the public winner announcement later in October. Matthew confirms that October 9 was his understanding and asks to leave the date tentative. The journal says he thinks he might get an update that day, not that a decision or public announcement is scheduled. Do not turn his optimism into a known win or describe Shipaton as the largest competition in the world.
+
+The new marketing reflection is his account of two weeks of trial Reels, a 2-million-view post, another 600,000-view post and organic UGC. Exact post/date evidence for the latter was not supplied. His observations about formats, demos, CTA, ManyChat and personal hooks are his lessons, not a controlled conversion or effectiveness comparison. Keep the earlier InstantDM account dated to September 28 rather than silently replacing it. The 4-million-view result is dated October 8, not backdated to September.
+
 October 1: Matthew approves “i'm building konvo - bootstrapped to 15,000 downloads at 16” for the homepage introduction. This restates his supplied bootstrapped account, existing download count and confirmed age; it adds no independent verification or active-user claim. The existing measurement questions remain unresolved.
 
 October 1: Matthew supplies “the most effective screentime app” for the homepage introduction, then replaces the full sentence with “i'm building konvo.” The comparative claim is no longer displayed. It was his requested promotional wording, not an independently verified comparative result. No effectiveness definition, comparison set or measured screen-time reduction was supplied; existing evidence status remains unchanged.
@@ -210,7 +256,7 @@ Reviewed September 26, 2026. Public narration may use clearly personal experienc
 | Konvo available on App Store | [Listing](https://apps.apple.com/us/app/konvo-dms-only/id6794756261) | Link to the live listing |
 | Six rejections, September 1 promotion, build 82 fix | Matthew, narrative, repo README | Explain as Matthew's development account |
 | Downloads/revenue/customers/reach/followers | Incomplete screenshots or definitions | Withhold pending verification; use local review reminders |
-| Shipaton | Supplied submission confirmation / [Devpost](https://devpost.com/software/konvo-dm-s-only) | Submitted only |
+| Shipaton | Supplied submission confirmation / [Devpost](https://devpost.com/software/konvo-dm-s-only); Matthew’s October 8 account | Submission sourced; later selection round is his dated account; no award established |
 | Designer before/after / pricing experiments | Missing supporting material | Local placeholder only; no invented results |
 
 ## Asset provenance

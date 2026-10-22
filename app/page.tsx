@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { homeIntro, ageOverview } from '@/content/portfolio';
 import { Story } from '@/components/story';
 import { PortfolioPage } from '@/components/portfolio-page';
@@ -9,6 +10,7 @@ export default function Home() {
       <section className="intro-project" aria-labelledby="intro-project-heading">
         <h2 id="intro-project-heading"><a href={homeIntro.href} target="_blank" rel="noreferrer">{homeIntro.label}</a></h2>
         <div className="intro-copy"><Story slug={homeIntro.story} /></div>
+        <Link className="intro-story-link" href={homeIntro.storyLink.href}>{homeIntro.storyLink.label}</Link>
       </section>
     </header>
     <section className="home-section age-overview" aria-labelledby="age-overview-heading">

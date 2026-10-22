@@ -24,10 +24,14 @@ export default function Konvo() {
       <header className="case-header"><h1>Konvo</h1><p className="case-meta">Founder, CEO · 2026</p><nav className="project-links" aria-label="Konvo links"><a href={links.konvo} target="_blank" rel="noreferrer">konvoinstall.com</a><a href={links.appStore} target="_blank" rel="noreferrer">App Store</a><a href="#konvo-demo">Demo</a><a href={links.source} target="_blank" rel="noreferrer">Source</a><a href={links.starterStory} target="_blank" rel="noreferrer">Starter Story</a></nav></header>
       <div className="prose opening"><Story slug="konvo-short-intro" /></div>
       <figure className="case-cover" id="konvo-demo"><Video href={links.video} /></figure>
+      <section className="case-role" aria-labelledby="konvo-role-heading">
+        <h2 id="konvo-role-heading">My part</h2>
+        <div className="prose"><Story slug="konvo-short-role" /></div>
+      </section>
       <details className="case-summary reading-details">
         <summary>Why I built Konvo</summary>
         <div className="reading-content">
-          <div className="prose"><Story slug="konvo-summary" /><Story slug="konvo-short-role" /></div>
+          <div className="prose"><Story slug="konvo-summary" /></div>
           <div className="case-mockups"><Photo photo={photos.konvoCutout} /></div>
           <Photo photo={photos.working} />
         </div>

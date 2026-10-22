@@ -1,5 +1,43 @@
 # Matthew Chan: retained interview notes
 
+## October 22: Instagram marketing evidence for forthcoming anecdotes
+
+Matthew supplies five image attachments showing his Instagram marketing journey and says they can be included now or saved until he answers the reflection questions. Attachments 1 and 4 are the same file, leaving four unique originals. He authorizes these specific supplied screenshots for use alongside his portfolio writing. Save them unchanged in ignored `private/marketing/2026-10-22/`, with descriptions, source hashes and matching questions in `manifest.json`. This pass chooses his offered save-for-later option so the images can accompany the correct anecdotes. No new story, posting date or chronological sequence has been supplied.
+
+## October 22: shorter September and the complete gallery
+
+Matthew says September is too jammed with anecdotes and asks for one paragraph, fusing related topics. Keep the launch-to-Reel thread in his existing words and the LinkedIn photo; remove September's six topic disclosures from the public page. The longer source accounts remain in Markdown history. He explicitly removes the October 8 Shipaton email/Biology-test entry from Konvo.
+
+He asks to restore every onboarding page and replace the three preview images with the first two screens and the personalized original-video paywall shown in his screenshot. After being shown the existing privacy rule and its August-only exception, he explicitly answers “Yes, keep these supplied onboarding screens as-is.” This extends publication permission to the supplied onboarding gallery's visible names and chat previews only. Keep all 66 screens and variations, in source order. The exact paywall is `paywall-video-personalized-v9`, with the personalized trial headline and monthly/yearly plans.
+
+## October 22: short updates and the onboarding redesign
+
+Matthew adds “started posting on @matthewasherelol” under age 15, linked to his existing Instagram profile, and “z fellows interview” under age 16. He gives no interview date, selection outcome or funding result; retain the short supplied wording.
+
+He says he spent 72 hours redesigning Konvo's onboarding pages from October 16 through 18. Add a short dated note with screenshots and a link to view the work. He supplies a screenshot and the local `konvo-current-onboarding-gallery.html` report in the separate Instamessages repository. Read that source without modifying it. A relative portfolio route should let visitors view selected screens without access to his Mac.
+
+He wants small updates and anecdotes from September onward that he can add at any time. Use “notes & updates” and allow entries with a date, title and brief story, without requiring a full monthly account or an accordion. Keep earlier accounts intact. His exact product-description correction is “Konvo opens straight to your Instagram messages and removes your Reels, Feed and Explore pages”.
+
+## October 22: updated totals and smaller Konvo sections
+
+Matthew requests “500,000+ robux (5k usd),” “25,000 downloads at 16” and “4,500,000+” organic views. Apply these to the current homepage and timeline wording and the Konvo opening. October 22 is the date of this request; no more precise measurement cutoff is supplied. Keep the dated September and October 8 accounts as history.
+
+He asks to split up “Read the full month” and supplies his [Starter Story article](https://www.starterstory.com/stories/konvoinstall-com), confirming he wrote it by hand and authorizing light edits for authenticity. Keep the monthly previews, then use separate native disclosures for the first build, API change, swipe feedback, App Store review, LinkedIn launch, paywall fix, trial Reels, viral Reel, results and learning. The October 8 account remains one short section. Reuse every paragraph of the existing full accounts and their reviewed media. Bring his existing “plugged mine in lol” sentence into the September preview and add the article's brief account of using Konvo himself for two weeks while building it. Keep his solo AI-assisted role explicit.
+
+## October 22: Academy portfolio review and small structural improvements
+
+Matthew is in Grade 11 and plans to apply next year. He supplies the Academy's portfolio instructions, which ask for personal contributions, challenges, learning, results and links to other work, and discourage AI-written application prose. He likes the current portfolio and explicitly selects “Review and make small structural improvements,” retaining the visual style and existing writing.
+
+This pass adds a direct homepage link to the Konvo story, short Work descriptions copied verbatim from existing story sentences, a visible “My part” section using the unchanged Konvo role paragraph, and topic labels on the monthly disclosures. The origin story and full monthly accounts retain their wording. No new experience, metric, lesson, award or contribution is supplied. Hall of Hacks implementation details remain a useful follow-up for Matthew's own words; do not invent them to fill an application rubric.
+
+## October 8: updated results, marketing and the Shipaton email
+
+Matthew updates the homepage introduction to 20,000 downloads and the age-16 account to 20,000 downloads, 4 million organic views and 12k Instagram followers. Use October 8, 2026 as the current snapshot date on the Konvo opening and timeline. Retain the established five-figure revenue wording and $0 advertising statement, along with the dated September results.
+
+His marketing reflection follows two weeks of trial Reels without the traction he wanted, then a 2-million-view Reel and another with 600,000 views. He describes organic UGC, copying viral formats that work, a clear product demo and CTA, ManyChat, and a hook around his age, a trend or a statement that makes someone go wow. “I just didn't give up” is his supplied reflection. Keep it under September’s complete account, with its 4-million-view total explicitly dated October 8. Retain the older September 27 trial-Reel numbers and September 28 InstantDM account as history.
+
+At 7:16 am on October 8, he received a RevenueCat email saying Konvo had reached a later selection round for at least one Shipaton category. About ten minutes later, he had his first Biology HL test at school. He describes shaking from both the email and the test, a wild morning, excitement and confidence that Konvo has a chance of winning because of his marketing and consistent revenue. He does not know the result yet. He clarifies that October 9 was his understanding, not an email-confirmed decision date, and asks to leave it tentative. Preserve that uncertainty and his confidence without inventing an award, prize category, exact selection-stage name or email quote. He also clarifies that the transcript’s “$20,000” reference means 20,000 downloads; keep “five figures in revenue.”
+
 Latest October 1 intro wording: “i'm building konvo - bootstrapped to 15,000 downloads at 16.” Matthew approves this framing using his existing bootstrapped account, download count and age. It replaces “i'm building konvo”; the earlier effectiveness claim stays removed. Keep his lowercase style and the existing name/age lines.
 
 Latest October 1 image change: replace the Konvo timeline’s “Earlier build” inbox thumbnail with Matthew’s supplied blue App Store listing screenshot. Use the existing wide thumbnail and enlarge-on-click presentation, with the label “App Store.”

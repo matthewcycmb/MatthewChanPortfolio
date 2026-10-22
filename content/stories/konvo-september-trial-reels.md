@@ -1,0 +1,3 @@
+I also started posting about Konvo on [Instagram](https://www.instagram.com/matthewasherelol/) and TikTok. By September 27, I’d posted around 14 trial Reels; two reached 20,000 and 30,000 views. My Instagram posts about Konvo had around 80,000 views in total by then.
+
+I tried studying clips with a text hook and demo, and videos where I explained Konvo straight to the camera. I noticed download spikes after the talking-head posts. That’s a reason to keep testing them, but it doesn’t tell me which posts the downloads came from. By September 27, I was planning to make roughly 80% of my videos talking-head posts and keep testing the studying clips too.

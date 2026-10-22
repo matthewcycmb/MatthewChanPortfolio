@@ -1,8 +1,8 @@
-import { photos, type PortfolioPhoto } from './photos';
+import { photos, onboardingScreens, type PortfolioPhoto } from './photos';
 
 export const profile = {
   name: 'Matthew Chan', age: 16, schoolYear: 'Grade 11', location: 'Vancouver, Canada',
-  graduation: '2028', updated: 'September 30, 2026', updatedISO: '2026-09-30',
+  graduation: '2028', updated: 'October 22, 2026', updatedISO: '2026-10-22',
   intro: 'Hello, I’m Matthew, a junior at Port Moody Secondary. Outside of building things, I enjoy playing tennis, pickleball, watching Korean dramas with my mom and watching YouTube.',
 };
 
@@ -31,6 +31,18 @@ export const links = {
 
 export const homeIntro = {
   label: 'KONVOINSTALL.COM', href: links.konvo, story: 'home-intro',
+  storyLink: { href: '/work/konvo', label: 'Read the Konvo story' },
+};
+
+export const onboardingGallery = {
+  href: '/work/konvo/onboarding',
+  backHref: '/work/konvo#update-october-16-18-2026',
+  label: 'View onboarding screens',
+  title: 'Onboarding',
+  period: 'October 2026',
+  story: 'konvo-onboarding-gallery',
+  screens: onboardingScreens,
+  previewPhotos: onboardingScreens.filter((photo) => ['welcome', 'compare', 'paywall-video-personalized-v9'].includes(photo.id)),
 };
 
 export const ageOverview = [
@@ -40,9 +52,9 @@ export const ageOverview = [
 ];
 
 export const work = [
-  { name: 'Konvo', period: 'Jul 2026 → now', status: 'On the App Store', href: '/work/konvo', photos: [photos.konvoCover] },
-  { name: 'Hall of Hacks', period: 'Jun 2026', status: 'Hackathon projects', href: '/work/hall-of-hacks', photos: [photos.hallOfHacksLogo] },
-  { name: 'Instagram', period: 'Jul 2025 → now', status: 'Videos about tech, building, and Konvo', href: links.instagram, photos: [photos.instagramSelfie] },
+  { name: 'Konvo', period: 'Jul 2026 → now', status: 'On the App Store', story: 'work-konvo', href: '/work/konvo', photos: [photos.konvoCover] },
+  { name: 'Hall of Hacks', period: 'Jun 2026', status: 'Hackathon projects', story: 'work-hall-of-hacks', href: '/work/hall-of-hacks', photos: [photos.hallOfHacksLogo] },
+  { name: 'Instagram', period: 'Jul 2025 → now', status: 'Videos about tech, building, and Konvo', story: 'work-instagram', href: links.instagram, photos: [photos.instagramSelfie] },
 ];
 
 export const hallOfHacksJournal = {

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { work } from '@/content/portfolio';
 import { PortfolioPage } from '@/components/portfolio-page';
 import { PhotoStack } from '@/components/photo-stack';
+import { Story } from '@/components/story';
 
 export const metadata: Metadata = { title: 'Work | Matthew Chan' };
 
@@ -16,6 +17,7 @@ export default function Work() {
           <PhotoStack photos={project.photos} label={project.name.toLowerCase()} />
           <span className="work-copy"><span className="work-title">{project.name}<span className="link-arrow" aria-hidden="true">↗</span></span></span>
           <span className="work-date">{project.period || project.status}</span>
+          <div className="work-description"><Story slug={project.story} /></div>
         </Link>
       </li>;
     })}</ul>

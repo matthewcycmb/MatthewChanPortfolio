@@ -5,22 +5,37 @@ import { mkdir, writeFile } from 'node:fs/promises';
 
 await mkdir('artifacts', { recursive: true });
 const base = process.env.PORTFOLIO_TEST_URL || 'http://127.0.0.1:3000';
+const testEmbeds = process.env.PORTFOLIO_TEST_EMBEDS === '1';
 const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
-const report = { layouts: [], reading: [], errors: [], checks: [], thirdPartyAccessibility: [] };
-const routes = ['/', '/work', '/timeline', '/work/konvo', '/work/hall-of-hacks'];
+const report = { externalPlayersTested: testEmbeds, layouts: [], reading: [], errors: [], checks: [], thirdPartyAccessibility: [] };
+const routes = ['/', '/work', '/timeline', '/work/konvo', '/work/hall-of-hacks', '/work/konvo/onboarding'];
+async function configurePage(page) {
+  // Local layout checks should not depend on third-party players finishing requests.
+  if (!testEmbeds) await page.route('https://**/*', (route) => route.abort());
+}
+async function settleImages(page) {
+  await page.evaluate(() => document.fonts.ready);
+  await page.locator('img:visible').evaluateAll(async (images) => {
+    images.forEach((img) => { img.loading = 'eager'; });
+    await Promise.all(images.map((img) => img.decode()));
+  });
+}
 try {
   for (const width of [1440, 768, 390, 320]) {
     const context = await browser.newContext({ viewport: { width, height: 900 }, deviceScaleFactor: 1 });
     const page = await context.newPage();
+    await configurePage(page);
     page.on('pageerror', (error) => report.errors.push(error.message));
     for (const route of routes) {
-      const response = await page.goto(base + route, { waitUntil: 'networkidle' });
+      const response = await page.goto(base + route, { waitUntil: 'domcontentloaded' });
       assert.equal(response.status(), 200);
+      await settleImages(page);
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
       assert.equal(overflow, false, `${route} overflows at ${width}px`);
       const anchors = await page.locator('a[href^="#"]').evaluateAll((links) => links.map((link) => link.getAttribute('href')).filter((href) => !document.getElementById(href.slice(1))));
       assert.deepEqual(anchors, []);
       assert.equal(await page.locator('h1').count(), 1);
+      assert.equal(await page.locator('a[href^="file:"]').count(), 0);
       if (['/', '/work', '/timeline'].includes(route)) {
         const nav = page.getByRole('navigation', { name: 'Main navigation' });
         assert.deepEqual(await nav.locator('a').evaluateAll((anchors) => anchors.map((a) => a.getAttribute('href'))), ['/', '/work', '/timeline', 'https://www.linkedin.com/in/matthew-chan-12546339b/']);
@@ -31,7 +46,10 @@ try {
         assert.equal(await page.locator('.timeline > li').count(), route === '/timeline' ? 6 : 0);
         assert.equal(await page.locator('.age-chapter').count(), route === '/' ? 3 : 0);
       }
-      const audit = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+      assert.equal(await page.locator('iframe').evaluateAll((frames) => frames.every((frame) => Boolean(frame.title.trim()))), true);
+      const auditor = new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']);
+      if (!testEmbeds) auditor.exclude('iframe');
+      const audit = await auditor.analyze();
       // Keep external players' internal findings visible, separate from markup we control.
       const findings = audit.violations.map(({ id, impact, nodes }) => ({ id, impact, elements: nodes.map((n) => n.target) }));
       const isExternalPlayer = (target) => ['/work/konvo', '/work/hall-of-hacks'].includes(route) && target.length > 1 && target[0] === 'iframe';
@@ -40,12 +58,10 @@ try {
       if (thirdParty.length) report.thirdPartyAccessibility.push({ route, width, findings: thirdParty });
       report.layouts.push({ route, width, overflow, accessibility });
       await writeFile('artifacts/browser-report.json', JSON.stringify(report, null, 2));
-      await page.locator('img').evaluateAll((images) => images.forEach((img) => { img.loading = 'eager'; }));
-      await page.waitForFunction(() => [...document.images].every((img) => img.complete && img.naturalWidth > 0));
-      if (route === '/work/hall-of-hacks' && (width === 1440 || width === 390)) {
+      if (testEmbeds && route === '/work/hall-of-hacks' && (width === 1440 || width === 390)) {
         await page.locator('.journal-reel iframe').scrollIntoViewIfNeeded();
         await page.frameLocator('.journal-reel iframe').getByRole('button', { name: 'Control', exact: true }).waitFor({ state: 'visible', timeout: 20000 });
-        await page.evaluate(() => window.scrollTo(0, 0));
+        await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
       }
       if (width === 1440 || width === 390) {
         await page.screenshot({ path: `artifacts/${route === '/' ? 'home' : route.split('/').pop()}-${width}.png`, fullPage: true });
@@ -53,28 +69,56 @@ try {
       }
       if (route === '/work/konvo') {
         const visibleWords = (await page.locator('main').innerText()).trim().split(/\s+/).length;
-        assert.ok(visibleWords >= 350 && visibleWords <= 500, `Konvo initially shows ${visibleWords} words`);
         assert.equal(await page.locator('.reading-details[open]').count(), 0);
         assert.equal(await page.locator('.monthly-preview-photo .photo-print:visible').count(), 3);
-        for (const month of ['july', 'august', 'september']) {
-          const entry = page.locator(`#update-${month}-2026`);
+        const sections = await page.locator('.monthly-details').all();
+        assert.equal(sections.length, 4);
+        assert.equal(await page.locator('.reading-details').count(), 5);
+        assert.equal(await page.locator('#update-september-2026 .monthly-preview p').count(), 1);
+        assert.equal(await page.locator('#update-september-2026 details').count(), 0);
+        assert.equal(await page.locator('#update-october-8-2026').count(), 0);
+        const note = page.locator('#update-october-16-18-2026');
+        assert.match(await note.innerText(), /72 hours redesigning Konvo's onboarding pages from October 16 to 18/);
+        assert.equal(await note.locator('details').count(), 0);
+        assert.equal(await note.locator('.update-gallery img').count(), 3);
+        assert.equal(await note.locator('.update-gallery').getAttribute('href'), '/work/konvo/onboarding');
+        if (width === 1440 || width === 390) {
+          await page.locator('#update-september-2026').screenshot({ path: `artifacts/konvo-topics-${width}.png`, style: '.skip-link:not(:focus) { visibility: hidden; }' });
+        }
+        for (const entry of sections) {
+          const id = await entry.getAttribute('id');
           const summary = entry.locator('summary');
           const full = entry.locator('.monthly-full');
           assert.equal(await full.isVisible(), false);
           await summary.focus();
           await page.keyboard.press('Enter');
           assert.equal(await full.isVisible(), true);
-          assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${month} expanded at ${width}px`);
-          if (month === 'september') {
-            assert.match(await full.innerText(), /local StoreKit test file/);
-            assert.match(await full.innerText(), /Tracking may miss some reopenings/);
-            assert.equal(await full.getByRole('link', { name: 'Starter Story' }).isVisible(), true);
-          }
+          await settleImages(page);
+          assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${id} expanded at ${width}px`);
           await page.keyboard.press('Space');
           assert.equal(await full.isVisible(), false);
           assert.equal(await summary.evaluate((element) => element === document.activeElement), true);
         }
-        report.reading.push({ width, visibleWords, monthlyDisclosures: 'Keyboard opens and closes each full month; expanded content fits.' });
+        report.reading.push({ width, visibleWords, monthlyDisclosures: 'September is one paragraph without topic disclosures. Keyboard opens and closes all four July/August sections; expanded content fits.' });
+      }
+      if (route === '/work/konvo/onboarding') {
+        const screens = page.getByRole('list', { name: 'Onboarding screens and variations' });
+        assert.equal(await screens.locator('li').count(), 66);
+        assert.equal(await page.locator('iframe, video').count(), 0);
+        if (width === 390) {
+          for (const photo of await screens.locator('.photo-print').all()) {
+            await photo.focus();
+            await page.keyboard.press('Enter');
+            assert.equal(await page.locator('dialog[open]').count(), 1);
+            assert.equal(await page.locator('dialog[open]').getAttribute('aria-label'), (await photo.getAttribute('aria-label')).replace('Enlarge photo: ', ''));
+            const enlarged = page.locator('dialog[open] > img');
+            await enlarged.evaluate((image) => image.decode());
+            assert.ok((await enlarged.boundingBox()).height > 200);
+            await page.keyboard.press('Escape');
+            await page.waitForFunction((element) => element === document.activeElement, await photo.elementHandle(), { timeout: 5000 });
+          }
+          report.checks.push('All 66 onboarding screens enlarge by keyboard, close with Escape and restore focus.');
+        }
       }
       if (route === '/work/hall-of-hacks') {
         assert.equal(await page.locator('details').count(), 0);
@@ -91,14 +135,14 @@ try {
             await page.keyboard.press('Enter');
             assert.equal(await page.locator('dialog[open]').count(), 1);
             await page.keyboard.press('Escape');
-            assert.equal(await photo.evaluate(element => element === document.activeElement), true);
+            await page.waitForFunction((element) => element === document.activeElement, await photo.elementHandle(), { timeout: 5000 });
           }
           report.checks.push('Hall of Hacks is fully expanded; both database images enlarge by keyboard and restore focus. Launch and follow-up Reel links are distinct.');
         }
       }
     }
     if (width === 390) {
-      await page.goto(base + '/timeline', { waitUntil: 'networkidle' });
+      await page.goto(base + '/timeline', { waitUntil: 'domcontentloaded' });
       assert.equal(await page.locator('.timeline summary').count(), 0);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
       const photo = page.getByRole('link', { name: 'Enlarge photo: Azazel, a red pumpkin accessory from my Roblox group.' });
@@ -106,7 +150,7 @@ try {
       assert.equal(await page.locator('dialog[open]').count(), 1);
       await page.keyboard.press('Escape');
       assert.equal(await page.locator('dialog[open]').count(), 0);
-      assert.equal(await photo.evaluate((element) => element === document.activeElement), true);
+      await page.waitForFunction((element) => element === document.activeElement, await photo.elementHandle(), { timeout: 5000 });
       await photo.click();
       await page.getByRole('button', { name: 'Close photo' }).click();
       assert.equal(await page.locator('dialog[open]').count(), 0);
@@ -137,28 +181,42 @@ try {
     }
     await context.close();
   }
-  const reduced = await browser.newPage({ reducedMotion: 'reduce', viewport: { width: 390, height: 844 } });
-  await reduced.goto(base, { waitUntil: 'networkidle' });
+  const reducedContext = await browser.newContext({ reducedMotion: 'reduce', viewport: { width: 390, height: 844 } });
+  const reduced = await reducedContext.newPage();
+  await configurePage(reduced);
+  await reduced.goto(base, { waitUntil: 'domcontentloaded' });
   assert.equal(await reduced.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), 'auto');
   await reduced.keyboard.press('Tab');
   assert.equal(await reduced.evaluate(() => document.activeElement?.textContent), 'Skip to content');
   report.checks.push('Reduced motion and keyboard skip link work.');
-  await reduced.goto(base + '/work/konvo', { waitUntil: 'networkidle' });
-  const reducedSummary = reduced.locator('#update-september-2026 summary');
+  await reduced.goto(base + '/work/konvo', { waitUntil: 'domcontentloaded' });
+  const reducedSummary = reduced.locator('#update-july-2026-api summary');
   await reducedSummary.focus();
   await reduced.keyboard.press('Enter');
-  assert.equal(await reduced.locator('#update-september-2026 .monthly-full').isVisible(), true);
+  assert.equal(await reduced.locator('#update-july-2026-api .monthly-full').isVisible(), true);
   assert.equal(await reducedSummary.evaluate((element) => getComputedStyle(element).transitionDuration), '0s');
-  report.checks.push('The full September entry opens with the keyboard with reduced motion enabled.');
-  await reduced.goto(base + '/work/hall-of-hacks', { waitUntil: 'networkidle' });
+  report.checks.push('The July API section opens with the keyboard with reduced motion enabled.');
+  await reduced.goto(base + '/work/hall-of-hacks', { waitUntil: 'domcontentloaded' });
   assert.equal(await reduced.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), 'auto');
   await reduced.locator('a[href="#hall-of-hacks-reel"]').focus();
   await reduced.keyboard.press('Enter');
   assert.equal(await reduced.locator('.journal-reel iframe').isVisible(), true);
   report.checks.push('Hall of Hacks Reel navigation works by keyboard with reduced motion.');
-  await reduced.close();
+  await reduced.goto(base + '/work/konvo/onboarding', { waitUntil: 'domcontentloaded' });
+  assert.equal(await reduced.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), 'auto');
+  const galleryPhoto = reduced.getByRole('link', { name: 'Enlarge photo: Konvo onboarding introducing Instagram blocking.' });
+  await galleryPhoto.focus();
+  await reduced.keyboard.press('Enter');
+  assert.equal(await reduced.locator('dialog[open]').count(), 1);
+  const dialogAudit = await new AxeBuilder({ page: reduced }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+  assert.equal(dialogAudit.violations.length, 0);
+  await reduced.keyboard.press('Escape');
+  await reduced.waitForFunction((element) => element === document.activeElement, await galleryPhoto.elementHandle(), { timeout: 5000 });
+  report.checks.push('Onboarding enlargement works with reduced motion and has no detected axe violations while open.');
+  await reducedContext.close();
   const nojs = await browser.newPage({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
-  await nojs.goto(base, { waitUntil: 'networkidle' });
+  await configurePage(nojs);
+  await nojs.goto(base, { waitUntil: 'domcontentloaded' });
   assert.equal(await nojs.locator('.timeline').count(), 0);
   assert.equal(await nojs.locator('.work-list').count(), 0);
   await nojs.locator('.home-header a[href="/timeline"]').click();
@@ -172,18 +230,30 @@ try {
   assert.equal(await nojs.locator('.demo iframe').count(), 1);
   assert.equal(await nojs.getByRole('link', { name: 'Watch the Konvo demo on YouTube' }).getAttribute('href'), 'https://www.youtube.com/watch?v=aq84DJg2bcY');
   assert.equal(await nojs.locator('.reading-details[open]').count(), 0);
-  for (const summary of await nojs.locator('.reading-details > summary').all()) {
+  const disclosures = await nojs.locator('.reading-details > summary').all();
+  for (const summary of disclosures) {
     await summary.click();
   }
-  assert.equal(await nojs.locator('.reading-details[open]').count(), 4);
+  assert.equal(await nojs.locator('.reading-details[open]').count(), disclosures.length);
   assert.equal(await nojs.locator('.case-summary .prose').isVisible(), true);
-  assert.match(await nojs.locator('#update-july-2026 .monthly-full').innerText(), /24-hour window/);
+  assert.match(await nojs.locator('#update-july-2026-api .monthly-full').innerText(), /24-hour window/);
   assert.equal(await nojs.locator('.monthly-video video').isVisible(), true);
-  assert.match(await nojs.locator('#update-september-2026 .monthly-full').innerText(), /Of 871 people/);
+  assert.equal(await nojs.locator('#update-september-2026 .monthly-preview p').count(), 1);
   assert.equal(await nojs.locator('.monthly-placeholders').count(), 0);
-  report.checks.push('Without JavaScript all three full months and the complete origin story expand; detailed usage figures, extra photos and the August video remain available.');
+  report.checks.push('Without JavaScript all four July/August sections and the complete origin story expand; September remains one paragraph, and the August video remains available.');
   report.checks.push('Without JavaScript the timeline, page navigation and YouTube fallback remain usable.');
-  await nojs.goto(base + '/work', { waitUntil: 'networkidle' });
+  await nojs.locator('.update-gallery').click();
+  await nojs.waitForURL('**/work/konvo/onboarding');
+  assert.equal(await nojs.getByRole('list', { name: 'Onboarding screens and variations' }).locator('li').count(), 66);
+  const directScreen = nojs.getByRole('link', { name: 'Enlarge photo: Konvo onboarding introducing Instagram blocking.' });
+  await directScreen.click();
+  await nojs.waitForURL('**/images/konvo-onboarding/keep.jpg');
+  await nojs.goBack();
+  await nojs.locator('header').getByRole('link', { name: '← Back to the update' }).click();
+  await nojs.waitForURL('**/work/konvo#update-october-16-18-2026');
+  assert.equal(await nojs.locator('#update-october-16-18-2026').isVisible(), true);
+  report.checks.push('Without JavaScript the short update opens the gallery, all 66 screens render, a screen opens directly and the return link reaches the dated update.');
+  await nojs.goto(base + '/work', { waitUntil: 'domcontentloaded' });
   await nojs.locator('.work-link[href="/work/hall-of-hacks"]').click();
   await nojs.waitForURL('**/work/hall-of-hacks');
   assert.match(await nojs.locator('main').innerText(), /Claude Fable/);

@@ -4,7 +4,13 @@ Published and inspected September 30, 2026: [Matthew’s Konvo interview](https:
 
 Matthew supplied the article and explicitly asked to use it to update the Konvo portfolio in his authentic voice. It is a source for his own account, not independent verification of the business’s results. The article itself says its revenue figures have not been independently verified. Use the clean URL without the email tracking parameters.
 
-## What changed
+## October 22 reread and section split
+
+Matthew confirms he wrote the interview by hand and again authorizes light edits. The public article was reread. Most of its concrete personal details were already in the saved narrative. The new topic files preserve every paragraph of the July, August and September full accounts, while moving the existing “plugged mine in lol” sentence into the visible September preview too. `konvo-september-learning.md` adds a brief account of using Konvo himself for two weeks while building. Exact dates remain unstated; personal use does not establish measured effectiveness.
+
+The third-person initial-version section speculates about frameworks with “likely” and “possibly.” It is not a source for new technical claims. Keep the existing supplied architecture and contribution account. Article images, headline revenue interpretations, conflicting launch timing and the quoted age hook remain excluded as described below. New 25,000-download / 4,500,000+-view totals come from Matthew's October 22 request, not the September article.
+
+## September 30 changes
 
 - `content/stories/konvo-update-september-2026.md` adds how Matthew adapted another creator’s LinkedIn post structure, his doubts after the initial launch, the September 28 trial Reel, his parents’ advice, InstantDM, and his reflection on learning to publish and promote his first app.
 - The existing trial-Reel count and 80% talking-head plan are explicitly situated by September 27. The 80,000-view snapshot still precedes the September 28 Reel; neither is a current total.
@@ -33,13 +39,13 @@ Lightly correct spelling, punctuation, capitalization and tense. Do not turn “
 | “Over 220,000” LinkedIn impressions in three days | Consistent with his earlier rough recollection, but not new analytics. Preserve the specifically reconciled “around 200,000” wording. |
 | “Maybe 20, 30 downloads a day” | No exact reporting window or acquisition evidence. Not added. |
 | Video hook quoted as “I’m 15” while article/profile say 16 | Avoid quoting the conflicting age hook; public copy says he explained his age and app. No change to profile age. |
-| Used Konvo himself for two weeks while building | Retained as source context; exact dates unstated and no need to repeat the existing origin story. Does not establish broader product validation. |
+| Used Konvo himself for two weeks while building | Added briefly to the learning section on October 22; exact dates unstated. Does not establish broader product validation. |
 
 No article images, analytics screenshots, conversations or testimonials were copied into public assets. Images visible in a third-party publication do not override this repository’s evidence and privacy rules. The text excerpt and pre-edit copies are retained in ignored `private/editorial/`; public-source notes live here. No metric verification flags change and no new analytics query was run.
 
 ## Questions sent September 30
 
-Later the same day, Matthew directly supplied “15,000+ downloads, 3 million organic views, 5 figs in revenue” and requested a results section. That later direct statement now supplies the current page and homepage snapshot, dated September 30 from “right now.” It is separate from the article headline. Questions about the precise cutoff, organic-view platforms and revenue definition remain pending in `CLAIMS.md`.
+Later the same day, Matthew directly supplied “15,000+ downloads, 3 million organic views, 5 figs in revenue” and requested a results section. That statement supplied the September 30 snapshot, dated from “right now,” and is retained as history after later updates. It is separate from the article headline. Questions about the precise cutoff, organic-view platforms and revenue definition remain pending in `CLAIMS.md`.
 
 1. What currency, date range and revenue definition does “first 10k month” describe?
 2. Should the portfolio retain August 21 approval and September 1 promotion, or are there corrected dates?

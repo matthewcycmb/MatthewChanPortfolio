@@ -1,4 +1,6 @@
 import 'server-only';
+import Image from 'next/image';
+import Link from 'next/link';
 import { konvoUpdates } from '@/content/konvo';
 import { isLocalReview } from '@/lib/publication';
 import { Story } from './story';
@@ -11,7 +13,7 @@ export function KonvoUpdates() {
 
   return <section className="monthly-updates" id="monthly-updates" aria-labelledby="monthly-updates-heading">
     <header className="monthly-updates-heading">
-      <h2 id="monthly-updates-heading">monthly notes</h2>
+      <h2 id="monthly-updates-heading">notes &amp; updates</h2>
       {updates.some((update) => update.template) && <p>Layout preview · Replace the brackets with your words and photos.</p>}
     </header>
     {updates.map((update) => <article className="monthly-entry" id={`update-${update.id}`} key={update.id} aria-labelledby={`update-${update.id}-title`}>
@@ -20,32 +22,40 @@ export function KonvoUpdates() {
         <h3 id={`update-${update.id}-title`}>{update.title}</h3>
       </header>
       <div className="prose monthly-preview"><Story slug={update.preview} /></div>
-      {update.photos[0] && <div className="photo-single monthly-preview-photo">
-        <Photo photo={update.photos[0]} />
+      {update.photo && <div className="photo-single monthly-preview-photo">
+        <Photo photo={update.photo} />
       </div>}
-      <details className="reading-details monthly-details">
-        <summary aria-label={`Read the full month: ${update.month}`}>Read the full month</summary>
-        <div className="reading-content monthly-full">
-          <div className="prose"><Story slug={update.story} /></div>
-          {update.photos.length > 1 && <div className={update.photos.length === 2 ? 'photo-single' : 'photo-grid'}>
-            {update.photos.slice(1).map((photo) => <Photo key={photo.src} photo={photo} />)}
-          </div>}
-          {update.appStore && <div className="app-store-gallery">
-            <div className="app-store-banner"><Photo photo={update.appStore.listing} /></div>
-            <div className="app-store-panels" role="group" aria-label="Konvo App Store screenshots">
-              {update.appStore.screenshots.map((photo) => <Photo key={photo.src} photo={photo} />)}
-            </div>
-          </div>}
-          {update.video && <figure className="monthly-video">
-            <video controls playsInline preload="none" poster={update.video.poster} width={update.video.width} height={update.video.height} aria-label={update.video.title} aria-describedby={`update-${update.id}-video-caption`}>
-              <source src={update.video.src} type="video/mp4" />
-              <a href={update.video.src}>Watch the Konvo demo</a>
-            </video>
-            <figcaption id={`update-${update.id}-video-caption`}>{update.video.description}</figcaption>
-          </figure>}
+      {update.gallery && <Link className="update-gallery" href={update.gallery.href}>
+        <div className="update-gallery-screens">
+          {update.gallery.previewPhotos.map((photo) => <Image key={photo.src} src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} sizes="(max-width: 554px) 28vw, 158px" />)}
         </div>
-      </details>
-      {!update.photos.length && !update.video && !update.appStore && review && <div className="photo-grid monthly-placeholders">
+        <span>{update.gallery.label} <span aria-hidden="true">↗</span></span>
+      </Link>}
+      {update.sections.length > 0 && <div className="monthly-sections">
+        {update.sections.map((section) => <details className="reading-details monthly-details" id={`update-${update.id}-${section.id}`} key={section.id}>
+          <summary aria-label={`${section.title}, ${update.month}`}><span>{section.title}</span></summary>
+          <div className="reading-content monthly-full">
+            <div className="prose">{section.stories.map((story) => <Story key={story} slug={story} />)}</div>
+            {Boolean(section.photos?.length) && <div className={section.photos?.length === 1 ? 'photo-single' : 'photo-grid'}>
+              {section.photos?.map((photo) => <Photo key={photo.src} photo={photo} />)}
+            </div>}
+            {section.appStore && <div className="app-store-gallery">
+              <div className="app-store-banner"><Photo photo={section.appStore.listing} /></div>
+              <div className="app-store-panels" role="group" aria-label="Konvo App Store screenshots">
+                {section.appStore.screenshots.map((photo) => <Photo key={photo.src} photo={photo} />)}
+              </div>
+            </div>}
+            {section.video && <figure className="monthly-video">
+              <video controls playsInline preload="none" poster={section.video.poster} width={section.video.width} height={section.video.height} aria-label={section.video.title} aria-describedby={`update-${update.id}-${section.id}-video-caption`}>
+                <source src={section.video.src} type="video/mp4" />
+                <a href={section.video.src}>Watch the Konvo demo</a>
+              </video>
+              <figcaption id={`update-${update.id}-${section.id}-video-caption`}>{section.video.description}</figcaption>
+            </figure>}
+          </div>
+        </details>)}
+      </div>}
+      {update.template && !update.photo && !update.gallery && !update.sections.some((section) => section.photos?.length || section.video || section.appStore) && review && <div className="photo-grid monthly-placeholders">
         {[1, 2].map((number) => <figure className="monthly-placeholder" key={number}>
           <div className="monthly-photo-space"><span>Photo or screenshot {number}</span></div>
           <figcaption>[A short caption for this photo.]</figcaption>
