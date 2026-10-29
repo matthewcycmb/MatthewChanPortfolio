@@ -42,7 +42,7 @@ export const onboardingGallery = {
   period: 'October 2026',
   story: 'konvo-onboarding-gallery',
   screens: onboardingScreens,
-  previewPhotos: onboardingScreens.filter((photo) => ['welcome', 'compare', 'paywall-video-personalized-v9'].includes(photo.id)),
+  previewPhotos: onboardingScreens.filter((photo) => ['welcome', 'compare', 'paywall-video'].includes(photo.id)),
 };
 
 export const ageOverview = [

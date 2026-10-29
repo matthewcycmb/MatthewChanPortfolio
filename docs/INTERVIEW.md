@@ -1,5 +1,11 @@
 # Matthew Chan: retained interview notes
 
+## October 28 follow-up: refresh onboarding and exact wording
+
+Matthew asks to update the public onboarding gallery from his current `konvo-current-onboarding-gallery.html`, then commit and push the changes. The supplied report now identifies version 2.5.7, build 290, with 59 screens and variations. Use the complete current set, including saved designs, under his existing authorization to preserve the supplied names and chat previews. The source repository remains read-only. The preview continues to show the first two screens and the current paywall.
+
+His exact replacements are “Hitting 2.1M views on 1 reel,” “Launching Konvo,” and “i am 16, a grade 11 IB student from Vancouver.” These change the two dated note headings and homepage introduction; they add no new results or shipped-feature claims.
+
 ## October 28: application-ready summary and concise project notes
 
 Matthew says he can apply now and supplies a consolidated account to use selectively in concise portfolio writing. He is 16, in Grade 11 IB in Coquitlam near Vancouver, and builds after school and on weekends. Keep the timeline as the brief overview; use the existing Konvo journal for short dated anecdotes rather than a new blog system or thirteen case-study sections. His exact closing replacement is “I love building.” His exact Work label is “@matthewasherelol on instagram (12.5k)” and description is “I post videos about Konvo, my hackathon journey and my story”. The specific 12.5k label takes precedence over the summary's 12,600.

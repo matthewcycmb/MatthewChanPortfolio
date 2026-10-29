@@ -1,3 +1,19 @@
+# October 28 follow-up: build-290 onboarding gallery
+
+Refreshed the gallery with all 59 records from the supplied version-2.5.7, build-290 report, in source order. Captured 55 current previews with reduced motion and retained four supplied archived student stills whose live previews are unavailable. The welcome image uses a clear frame at 0.5 seconds from its supplied animation. All images were visually reviewed, carry no EXIF/XMP or private source metadata, and match the ignored publication manifest. The source report still byte-matches its private pre-export snapshot; no Instamessages files were changed.
+
+Images now use `build-290` paths so caches cannot serve the previous screenshots. The three-image note shows `welcome`, `compare` and the current `paywall-video`. Applied Matthew's exact two heading replacements and Vancouver introduction. Feature statuses and narrative dates are unchanged.
+
+Validation passed:
+
+- `npm run check`: ESLint, TypeScript and all five publication-policy tests.
+- `PORTFOLIO_REVIEW=1 npm run build`: production build succeeds. All eight generated HTML documents exclude local placeholders and private source paths. Exact wording and all 59 image paths/hashes pass inspection.
+- `PORTFOLIO_TEST_URL=http://127.0.0.1:3001 node scripts/check-browser.mjs`: all six routes at 1440, 768, 390 and 320 pixels, without horizontal overflow, browser page errors or detected axe violations in local markup.
+- All 59 photos enlarge by keyboard, close with Escape and restore focus. Reduced motion, no-JavaScript image links and return navigation pass. External player internals remain outside this run.
+- Desktop/mobile gallery and preview screenshots were visually reviewed. `git diff --check` passes. Source snapshots, export manifests and browser artifacts stay ignored.
+
+Matthew explicitly requests committing and pushing the completed changes. The existing GitHub-connected Vercel production deployment is the requested publication target.
+
 # October 28: concise project stories and current results
 
 Updated Home, Work and Timeline from Matthew's supplied summary, using his exact Instagram label, description and “I love building” closing. The current 26,000-download total is distinct from a first-month result, and the roughly 10 million organic views belongs to his personal Instagram account. Four dated Konvo notes cover the launch-day paywall fix, marketing, onboarding redesign and customer requests in one paragraph each, ranging from 32 to 76 words. The three-month student offer and improved notifications remain explicitly in development. The 66-screen onboarding gallery and its three selected previews are unchanged.

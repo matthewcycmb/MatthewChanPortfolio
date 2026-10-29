@@ -1,5 +1,11 @@
 # Claims and asset audit
 
+## October 28 follow-up: current onboarding gallery
+
+Matthew requests refreshing the deployed gallery from his supplied current report. Version 2.5.7, build 290 contains 59 records, replacing the earlier 66-record snapshot. All current records are retained in source-array order, including saved student designs, notification examples and paywall studies. This remains a gallery of supplied design artifacts, not evidence that every variant or feature shipped. The student offer and improved-notification development status remains unchanged. The October 16–18 work dates are separate from this October 28 export.
+
+Capture current rendered previews with reduced motion for complete, readable text. Four archived student records have no working live preview in this build, so retain their supplied embedded stills instead. Public image paths are versioned under `public/images/konvo-onboarding/build-290/` to avoid reusing cached earlier images. Source snapshots, export manifests and hashes remain ignored under `private/editorial/onboarding-2026-10-28/`. The existing permission for this supplied gallery's names and chat previews applies; no unrelated private material is published and no Instamessages files are modified.
+
 ## October 28: current totals, scoped views and feature status
 
 Matthew explicitly clarifies that 26,000 downloads is the current total, not the first 30 days. The homepage, Konvo opening and timeline use that count as of this October 28 update. His new 4,000-person Android waitlist is distinct from downloads, active users and paying customers; signup dates and deduplication are unspecified. The existing five-figure revenue wording remains authorized and unresolved as to currency and accounting definition. No result becomes independently verified.

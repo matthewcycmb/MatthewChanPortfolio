@@ -48,11 +48,11 @@ export const konvoUpdates: KonvoUpdate[] = [
     ],
   },
   {
-    id: 'september-1-2026', month: 'September 1, 2026', date: '2026-09-01', title: 'The launch-day paywall fix',
+    id: 'september-1-2026', month: 'September 1, 2026', date: '2026-09-01', title: 'Launching Konvo',
     preview: 'konvo-update-september-1-2026', photo: photos.linkedinLaunch, sections: [], template: false,
   },
   {
-    id: 'september-2026', month: 'September 28, 2026', date: '2026-09-28', title: 'Finding a video that worked',
+    id: 'september-2026', month: 'September 28, 2026', date: '2026-09-28', title: 'Hitting 2.1M views on 1 reel',
     preview: 'konvo-preview-september-2026', photo: photos.konvoMarketingReel, template: false,
     sections: [],
   },

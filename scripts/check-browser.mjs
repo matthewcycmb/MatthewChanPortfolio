@@ -106,7 +106,7 @@ try {
       }
       if (route === '/work/konvo/onboarding') {
         const screens = page.getByRole('list', { name: 'Onboarding screens and variations' });
-        assert.equal(await screens.locator('li').count(), 66);
+        assert.equal(await screens.locator('li').count(), 59);
         assert.equal(await page.locator('iframe, video').count(), 0);
         if (width === 390) {
           for (const photo of await screens.locator('.photo-print').all()) {
@@ -120,7 +120,7 @@ try {
             await page.keyboard.press('Escape');
             await page.waitForFunction((element) => element === document.activeElement, await photo.elementHandle(), { timeout: 5000 });
           }
-          report.checks.push('All 66 onboarding screens enlarge by keyboard, close with Escape and restore focus.');
+          report.checks.push('All 59 onboarding screens enlarge by keyboard, close with Escape and restore focus.');
         }
       }
       if (route === '/work/hall-of-hacks') {
@@ -207,7 +207,7 @@ try {
   report.checks.push('Hall of Hacks Reel navigation works by keyboard with reduced motion.');
   await reduced.goto(base + '/work/konvo/onboarding', { waitUntil: 'domcontentloaded' });
   assert.equal(await reduced.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), 'auto');
-  const galleryPhoto = reduced.getByRole('link', { name: 'Enlarge photo: Konvo onboarding introducing Instagram blocking.' });
+  const galleryPhoto = reduced.getByRole('link', { name: 'Enlarge photo: Konvo onboarding: Same Instagram, no distractions.' });
   await galleryPhoto.focus();
   await reduced.keyboard.press('Enter');
   assert.equal(await reduced.locator('dialog[open]').count(), 1);
@@ -247,15 +247,15 @@ try {
   report.checks.push('Without JavaScript the timeline, page navigation and YouTube fallback remain usable.');
   await nojs.locator('.update-gallery').click();
   await nojs.waitForURL('**/work/konvo/onboarding');
-  assert.equal(await nojs.getByRole('list', { name: 'Onboarding screens and variations' }).locator('li').count(), 66);
-  const directScreen = nojs.getByRole('link', { name: 'Enlarge photo: Konvo onboarding introducing Instagram blocking.' });
+  assert.equal(await nojs.getByRole('list', { name: 'Onboarding screens and variations' }).locator('li').count(), 59);
+  const directScreen = nojs.getByRole('link', { name: 'Enlarge photo: Konvo onboarding: Same Instagram, no distractions.' });
   await directScreen.click();
-  await nojs.waitForURL('**/images/konvo-onboarding/keep.jpg');
+  await nojs.waitForURL('**/images/konvo-onboarding/build-290/welcome.jpg');
   await nojs.goBack();
   await nojs.locator('header').getByRole('link', { name: '← Back to the update' }).click();
   await nojs.waitForURL('**/work/konvo#update-october-16-18-2026');
   assert.equal(await nojs.locator('#update-october-16-18-2026').isVisible(), true);
-  report.checks.push('Without JavaScript the short update opens the gallery, all 66 screens render, a screen opens directly and the return link reaches the dated update.');
+  report.checks.push('Without JavaScript the short update opens the gallery, all 59 screens render, a screen opens directly and the return link reaches the dated update.');
   await nojs.goto(base + '/work', { waitUntil: 'domcontentloaded' });
   await nojs.locator('.work-link[href="/work/hall-of-hacks"]').click();
   await nojs.waitForURL('**/work/hall-of-hacks');

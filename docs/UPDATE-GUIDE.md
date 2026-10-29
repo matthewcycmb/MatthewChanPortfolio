@@ -2,6 +2,12 @@
 
 Run `npm ci`, then `npm run dev`. Open http://127.0.0.1:3000.
 
+## October 28 follow-up: refreshed onboarding gallery
+
+The current gallery follows the complete 59-record build-290 report, superseding earlier references to 66 screens. Preserve source order and every saved variation. Public photo records stay in `content/photos.ts`; versioned assets are under `public/images/konvo-onboarding/build-290/`. The three update previews now use `welcome`, `compare` and `paywall-video`. Keep the existing static gallery, image enlargement, no-JavaScript links and return destination. Never publish the local report or application code.
+
+The supplied note titles are now “Launching Konvo” and “Hitting 2.1M views on 1 reel.” The homepage introduction reads “i am 16, a grade 11 IB student from Vancouver.” Other current figures and feature statuses stay unchanged.
+
 ## October 28: concise overview and dated Konvo notes
 
 Current Home and Instagram displays use the direct requested 12.5k follower label; personal Instagram has roughly 10 million organic views. Konvo has 26,000 downloads as of this update and 4,000 people on its Android waitlist. The first-30-days download phrase was explicitly corrected by Matthew and must not return. Keep personal-account reach distinct from Konvo's product results. The Work description and “I love building” closing use his exact wording. The mobile Work layout places the date below the title to accommodate the longer handle label without squeezing it against the date.
