@@ -1,1 +1,1 @@
-At 12, I made **500,000+ Robux** (5k usd) selling pumpkin heads on Roblox. I hired modellers and built a Discord community alongside it.
+At 12, I made **500,000+ Robux** (5k usd) in two months selling pumpkin heads on Roblox. I created the concepts, commissioned modellers and texturers, and hired an approved creator to upload them. Around 500 people joined my Discord community and voted on future designs. I stopped when uploading opened to everyone and the market changed.

@@ -1,1 +1,1 @@
-I spent 72 hours redesigning Konvo's onboarding pages from October 16 to 18.
+After an expert critiqued my onboarding, I spent 72 hours redesigning Konvo's onboarding pages from October 16 to 18. I realized that attracting downloads wasn’t enough if the product experience lost people.

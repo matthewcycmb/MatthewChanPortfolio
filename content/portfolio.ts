@@ -1,8 +1,8 @@
 import { photos, onboardingScreens, type PortfolioPhoto } from './photos';
 
 export const profile = {
-  name: 'Matthew Chan', age: 16, schoolYear: 'Grade 11', location: 'Vancouver, Canada',
-  graduation: '2028', updated: 'October 22, 2026', updatedISO: '2026-10-22',
+  name: 'Matthew Chan', age: 16, schoolYear: 'Grade 11 IB', location: 'Coquitlam, near Vancouver, Canada',
+  graduation: '2028', updated: 'October 28, 2026', updatedISO: '2026-10-28',
   intro: 'Hello, I’m Matthew, a junior at Port Moody Secondary. Outside of building things, I enjoy playing tennis, pickleball, watching Korean dramas with my mom and watching YouTube.',
 };
 
@@ -54,7 +54,7 @@ export const ageOverview = [
 export const work = [
   { name: 'Konvo', period: 'Jul 2026 → now', status: 'On the App Store', story: 'work-konvo', href: '/work/konvo', photos: [photos.konvoCover] },
   { name: 'Hall of Hacks', period: 'Jun 2026', status: 'Hackathon projects', story: 'work-hall-of-hacks', href: '/work/hall-of-hacks', photos: [photos.hallOfHacksLogo] },
-  { name: 'Instagram', period: 'Jul 2025 → now', status: 'Videos about tech, building, and Konvo', story: 'work-instagram', href: links.instagram, photos: [photos.instagramSelfie] },
+  { name: '@matthewasherelol on instagram (12.5k)', period: 'Jul 2025 → now', status: 'Videos about Konvo, my hackathon journey and my story', story: 'work-instagram', href: links.instagram, photos: [photos.instagramSelfie] },
 ];
 
 export const hallOfHacksJournal = {

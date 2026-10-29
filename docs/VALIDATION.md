@@ -1,3 +1,19 @@
+# October 28: concise project stories and current results
+
+Updated Home, Work and Timeline from Matthew's supplied summary, using his exact Instagram label, description and “I love building” closing. The current 26,000-download total is distinct from a first-month result, and the roughly 10 million organic views belongs to his personal Instagram account. Four dated Konvo notes cover the launch-day paywall fix, marketing, onboarding redesign and customer requests in one paragraph each, ranging from 32 to 76 words. The three-month student offer and improved notifications remain explicitly in development. The 66-screen onboarding gallery and its three selected previews are unchanged.
+
+The marketing note uses Matthew's specifically authorized 2.1M-view Reel thumbnail. The publication copy has identical decoded pixels to the supplied original, with EXIF, IPTC and JPEG comment metadata removed. The original and comparison manifest stay ignored under `private/`. No other marketing screenshots were published.
+
+Validation passed:
+
+- `npm run check`: ESLint, TypeScript and all five publication-policy tests.
+- `PORTFOLIO_REVIEW=1 npm run build`: all eight generated HTML documents exclude local photo placeholders, private source paths and `file:///` links. Rendered copy checks confirm the exact requested wording, current totals and development status.
+- `node scripts/check-browser.mjs`: six routes at 1440, 768, 390 and 320 pixels, with no horizontal overflow, browser page errors or detected axe violations in portfolio markup.
+- Keyboard navigation, all 66 gallery enlargements, focus restoration, reduced motion and no-JavaScript reading pass. Third-party player internals were not tested in this isolated browser run.
+- Desktop and mobile Work screenshots, the mobile Home and Timeline, and the marketing note were visually reviewed. The mobile Work date now sits below the longer Instagram title. `git diff --check` passes.
+
+Browser reports and screenshots remain ignored in `artifacts/`. Matthew requested committing and pushing the finished changes to GitHub after validation.
+
 # October 22 correction: one September paragraph and all onboarding screens
 
 September now has one paragraph and its LinkedIn launch photo, with no topic disclosures. The October 8 Shipaton entry is absent from the rendered journal. The October 16–18 note previews `welcome`, `compare` and `paywall-video-personalized-v9` in that order. The complete gallery contains all 66 supplied screens and design variations, retaining their names and chat previews with Matthew's explicit permission recorded in AGENTS.md and CLAIMS.md.

@@ -1,1 +1,1 @@
-Now I post about tech, hackathons, my story, and Konvo.
+I post videos about Konvo, my hackathon journey and my story

@@ -1,0 +1,1 @@
+A student who couldn’t afford Konvo prompted me to work on three free months through school-email verification, without a credit card. A paying customer’s request also pushed me to work on better message notifications. Both are still in development.

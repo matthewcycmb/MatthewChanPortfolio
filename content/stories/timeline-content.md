@@ -1,1 +1,1 @@
-At 14, I started posting coding videos, then tried motivation, Pokémon, and vlogs. Now I share my story, tech, hackathons, and what I’m building. I have about **5.5k** followers and **3.5 million** views on Instagram.
+At 14, I started posting coding videos, then tried motivation, Pokémon, and vlogs. Now I create and edit videos about Konvo, my hackathon journey and my story, experimenting with hooks, pacing and product demos. As of October 28, 2026, I have about **12.5k** followers and roughly **10 million** organic views on Instagram.

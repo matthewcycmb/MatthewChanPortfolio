@@ -2,6 +2,14 @@
 
 Run `npm ci`, then `npm run dev`. Open http://127.0.0.1:3000.
 
+## October 28: concise overview and dated Konvo notes
+
+Current Home and Instagram displays use the direct requested 12.5k follower label; personal Instagram has roughly 10 million organic views. Konvo has 26,000 downloads as of this update and 4,000 people on its Android waitlist. The first-30-days download phrase was explicitly corrected by Matthew and must not return. Keep personal-account reach distinct from Konvo's product results. The Work description and “I love building” closing use his exact wording. The mobile Work layout places the date below the title to accommodate the longer handle label without squeezing it against the date.
+
+The timeline stays concise, explaining personal contributions and results. The Konvo origin is condensed inside its existing disclosure, and the visible role paragraph keeps solo AI-assisted development explicit. Four short, fully visible dated notes cover the September 1 paywall fix, September 28 marketing, October 16–18 onboarding redesign, and October 28 customer-request work. Each is one paragraph, using `sections: []`; July/August retain their existing longer optional accounts. The marketing entry keeps its original `september-2026` anchor, now with a specific September 28 date, and uses the supplied 2.1M Reel image. Do not restore six September topic disclosures or the removed Shipaton entry.
+
+The student offer and improved notifications remain in development, confirmed by Matthew on October 28. The onboarding note adds his critique-triggered reflection without claiming a measured result. The complete 66-screen gallery and its first-two-plus-paywall preview remain intact. Older guidance below records earlier layouts and figures; this section takes precedence for the current site.
+
 ## Marketing screenshots waiting for Matthew's account
 
 Four unique originals from his October 22 message are saved in ignored `private/marketing/2026-10-22/`. Read its `manifest.json` when he supplies the next marketing anecdotes; it maps attachments to files and records the displayed evidence and missing dates/links. He has authorized use of these specific screenshots, and chose to let us either include them immediately or save them for later. Match the selected images to his actual events before placing them alongside a short paragraph. Do not infer chronology, project identity or product conversion from view counts. Keep the originals private and use selected publication copies when the story is ready.

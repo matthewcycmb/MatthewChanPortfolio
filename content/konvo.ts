@@ -48,12 +48,20 @@ export const konvoUpdates: KonvoUpdate[] = [
     ],
   },
   {
-    id: 'september-2026', month: 'September 2026', date: '2026-09', title: 'Launched Konvo',
-    preview: 'konvo-preview-september-2026', photo: photos.linkedinLaunch, template: false,
+    id: 'september-1-2026', month: 'September 1, 2026', date: '2026-09-01', title: 'The launch-day paywall fix',
+    preview: 'konvo-update-september-1-2026', photo: photos.linkedinLaunch, sections: [], template: false,
+  },
+  {
+    id: 'september-2026', month: 'September 28, 2026', date: '2026-09-28', title: 'Finding a video that worked',
+    preview: 'konvo-preview-september-2026', photo: photos.konvoMarketingReel, template: false,
     sections: [],
   },
   {
     id: 'october-16-18-2026', month: 'October 16–18, 2026', date: '2026-10-16', title: '72 hours redesigning onboarding',
     preview: 'konvo-update-october-16-18-2026', gallery: onboardingGallery, sections: [], template: false,
+  },
+  {
+    id: 'october-28-2026', month: 'October 28, 2026', date: '2026-10-28', title: 'Building from customer requests',
+    preview: 'konvo-update-october-28-2026', sections: [], template: false,
   },
 ];

@@ -70,13 +70,16 @@ try {
       if (route === '/work/konvo') {
         const visibleWords = (await page.locator('main').innerText()).trim().split(/\s+/).length;
         assert.equal(await page.locator('.reading-details[open]').count(), 0);
-        assert.equal(await page.locator('.monthly-preview-photo .photo-print:visible').count(), 3);
+        assert.equal(await page.locator('.monthly-preview-photo .photo-print:visible').count(), 4);
         const sections = await page.locator('.monthly-details').all();
         assert.equal(sections.length, 4);
         assert.equal(await page.locator('.reading-details').count(), 5);
         assert.equal(await page.locator('#update-september-2026 .monthly-preview p').count(), 1);
         assert.equal(await page.locator('#update-september-2026 details').count(), 0);
         assert.equal(await page.locator('#update-october-8-2026').count(), 0);
+        assert.equal(await page.locator('#update-september-1-2026 .monthly-preview p').count(), 1);
+        assert.equal(await page.locator('#update-september-1-2026 details').count(), 0);
+        assert.match(await page.locator('#update-october-28-2026').innerText(), /Both are still in development/);
         const note = page.locator('#update-october-16-18-2026');
         assert.match(await note.innerText(), /72 hours redesigning Konvo's onboarding pages from October 16 to 18/);
         assert.equal(await note.locator('details').count(), 0);
@@ -99,7 +102,7 @@ try {
           assert.equal(await full.isVisible(), false);
           assert.equal(await summary.evaluate((element) => element === document.activeElement), true);
         }
-        report.reading.push({ width, visibleWords, monthlyDisclosures: 'September is one paragraph without topic disclosures. Keyboard opens and closes all four July/August sections; expanded content fits.' });
+        report.reading.push({ width, visibleWords, monthlyDisclosures: 'The launch fix, marketing, onboarding and customer requests each use one paragraph without topic disclosures. Keyboard opens and closes all four July/August sections; expanded content fits.' });
       }
       if (route === '/work/konvo/onboarding') {
         const screens = page.getByRole('list', { name: 'Onboarding screens and variations' });
@@ -240,7 +243,7 @@ try {
   assert.equal(await nojs.locator('.monthly-video video').isVisible(), true);
   assert.equal(await nojs.locator('#update-september-2026 .monthly-preview p').count(), 1);
   assert.equal(await nojs.locator('.monthly-placeholders').count(), 0);
-  report.checks.push('Without JavaScript all four July/August sections and the complete origin story expand; September remains one paragraph, and the August video remains available.');
+  report.checks.push('Without JavaScript all four July/August sections and the complete origin story expand; the short dated notes and August video remain available.');
   report.checks.push('Without JavaScript the timeline, page navigation and YouTube fallback remain usable.');
   await nojs.locator('.update-gallery').click();
   await nojs.waitForURL('**/work/konvo/onboarding');
